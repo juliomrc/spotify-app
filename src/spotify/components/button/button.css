@@ -1,0 +1,9 @@
+.reset-button-style {
+    cursor: pointer;
+    padding: 0;
+    background: none;
+    border: none;
+    text-align: inherit;
+    font: inherit;
+    color: inherit;
+}

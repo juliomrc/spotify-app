@@ -1,0 +1,33 @@
+.playlist-preview-container {
+    display: flex;
+    flex-direction: column;
+    padding: 20px 20px 16px;
+    height: 275px;
+    width: 200px;
+    background-color: #282828;
+    border-radius: 12px;
+}
+
+.playlist-title {
+    line-height: 18px;
+    height: 18px;
+    margin: 5px 0 10px;
+    font-weight: 500;
+    overflow: hidden;
+    /* TODO: 3 dots when it is too big */
+}
+
+.playlist-description {
+    font-size: 12px;
+    line-height: 18px;
+    color: #b3b3b3;
+    overflow: hidden;
+    /* TODO: 3 dots when it is too big */
+}
+
+.image {
+    display: flex;
+    flex-wrap: wrap;
+    width: 197px;
+    height: 197px;
+}

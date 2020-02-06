@@ -1,0 +1,16 @@
+.main-app-container {
+    position: relative;
+    display: flex;
+    background-color: rgb(18, 18, 18);
+    color: white;
+    min-height: -webkit-fill-available;
+}
+
+.center-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.content {
+    margin: 10px
+}

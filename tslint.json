@@ -1,0 +1,113 @@
+{
+    "rules": {
+      "deprecation": {
+        "severity": "warning"
+      },
+      "jsx-no-multiline-js": false,
+      "no-implicit-dependencies": [
+        false,
+        "dev"
+      ],
+      "ordered-imports": false,
+      "object-literal-sort-keys": false,
+      "no-submodule-imports": [
+        true,
+        "@components",
+        "@processes",
+        "rc-calendar",
+        "@logic-millenet",
+        "@millenet",
+        "@millenet-mobile"
+      ],
+      "prefer-const": true,
+      "no-var-keyword": true,
+      "quotemark": [
+        true,
+        "double",
+        "avoid-escape",
+        "avoid-template",
+        "jsx-double"
+      ],
+      "indent": [
+        true,
+        "spaces"
+      ],
+      "object-literal-shorthand": true,
+      "object-literal-key-quotes": [
+        true,
+        "as-needed"
+      ],
+      "no-eval": true,
+      "space-before-function-paren": [
+        true,
+        {
+          "anonymous": "always",
+          "named": "never"
+        }
+      ],
+      "arrow-parens": false,
+      "no-duplicate-imports": true,
+      "one-variable-per-declaration": [
+        true,
+        "ignore-for-loop"
+      ],
+      "triple-equals": [
+        true,
+        "allow-null-check"
+      ],
+      "curly": [
+        true,
+        "ignore-same-line"
+      ],
+      "comment-format": [
+        true,
+        "check-space"
+      ],
+      "whitespace": [
+        true,
+        "check-branch",
+        "check-decl",
+        "check-operator",
+        "check-preblock",
+        "check-separator"
+      ],
+      "eofline": true,
+      "no-trailing-whitespace": true,
+      "no-consecutive-blank-lines": true,
+      "trailing-comma": [
+        true,
+        {
+          "multiline": "always",
+          "singleline": "never",
+          "esSpecCompliant": true
+        }
+      ],
+      "semicolon": [
+        true,
+        "always"
+      ],
+      "no-construct": true,
+      "radix": true,
+      "variable-name": [
+        true,
+        "check-format",
+        "allow-pascal-case"
+      ],
+      "class-name": true,
+      "no-this-assignment": [
+        true,
+        "allow-destructuring"
+      ],
+      "no-boolean-literal-compare": false,
+      "max-line-length": [
+        true,
+        {
+          "limit": 140,
+          "ignore-pattern": "^(\\s*)\"(en-US|pl-PL)"
+        }
+      ],
+      "no-parameter-reassignment": true,
+      "no-magic-numbers": true,
+      "react-hooks-nesting": "error"
+    }
+  }

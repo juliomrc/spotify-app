@@ -1,0 +1,36 @@
+.side-bar {
+    display: flex;
+    flex-direction: column;
+    background-color: #040404;
+    min-width: 230px;
+}
+
+.side-bar-content {
+    position: fixed;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    background-color: #040404;
+}
+
+.side-bar-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 20px;
+    height: 30px;
+}
+
+.active-item {
+    border-left: green 5px solid;
+}
+
+.inactive-item {
+    border-left: #040404 5px solid;
+}
+
+.logo {
+    margin: 20px;
+}
