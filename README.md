@@ -20,3 +20,4 @@ open http://localhost:8888/ && log in
 - Change for .css for .less
 - Implement tests
 - Create player
+- ...
