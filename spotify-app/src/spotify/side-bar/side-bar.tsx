@@ -1,13 +1,13 @@
 import React from "react";
+import classNames from "classnames";
 import { Button } from "../components/button/button";
 
-import "./side-bar.css";
-import classNames from "classnames";
 import { Svg } from "../components/svg";
 import { NavLink } from "../components/nav-link";
-
 import spotifyLogo from "../components/resources/icons/spotify_logo_with_text.inline.svg";
 import { ContentMode } from "../container";
+
+import "./side-bar.css";
 
 const logoWidth = 160;
 
@@ -29,7 +29,7 @@ export const SideBar: React.FC<ISideBar> = (props) => {
     return (
         <div className={"side-bar"}>
             <div className={"side-bar-content"}>
-                <NavLink to={"/"} className={"logo"}>
+                <NavLink to={"/spotify"} className={"logo"}>
                     <Svg width={logoWidth}>{spotifyLogo}</Svg>
                 </NavLink>
                 <Button onClick={onClickCategories} className={sideBarItemClass(ContentMode.Categories)}>Categories</Button>

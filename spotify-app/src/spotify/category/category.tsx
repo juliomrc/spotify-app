@@ -1,12 +1,13 @@
 import React from "react";
-// TODO: ALIAS
-import { useCategory, ICategoryIn } from "../logic/use-category";
+
+import { useCategory } from "../logic/use-category";
+import { useGetNewReleases } from "../logic/use-get-new-releases/use-get-new-releases";
+
 import { PlaylistPreview } from "../playlist-preview";
+import { Button } from "../components/button";
+import { FetchingState } from "../fetching-state";
 
 import "./category.css";
-import { Button } from "../components/button";
-import { useGetNewReleases } from "../logic/use-get-new-releases/use-get-new-releases";
-import { FetchingState } from "../fetching-state";
 
 interface ICategory {
     categoryId: string;
@@ -15,13 +16,14 @@ interface ICategory {
 }
 
 export const Category = (props: ICategory) => {
+    // TODO: These shouldn't both be fetched on componentDidMount because the user might never open the second page. Unnecessary call
     const { categoryPlaylists, fetchingState } = useCategory({ categoryId: props.categoryId });
     const { newAlbuns, fetchingState: newReleasesFetchingState } = useGetNewReleases();
 
     const mergedFetchingState = props.showNewReleases ? newReleasesFetchingState : fetchingState;
-    const content: any = props.showNewReleases ? newAlbuns : categoryPlaylists?.categoryData?.items;
 
     // TODO: Library typings are incorrect. Both endpoints return the same object but the typings are different
+    const content: any = props.showNewReleases ? newAlbuns : categoryPlaylists?.categoryData?.items;
     const playListComponents = content?.map((playlist: any) => {
         const onPlaylistClick = () => {
             props.onPlaylistClick(playlist.id);

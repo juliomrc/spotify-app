@@ -1,12 +1,11 @@
 import React from "react";
 import { IFetchingState } from "../logic/use-fetch";
 
-export const FetchingState: React.FC<IFetchingState> = (props) => {
-    console.log(props);
-    return (
-        <div>
-            {props.isLoading && <div>Loading data...</div>}
-            {props.hasError && <div>Ups... Something went wrong</div>}
-        </div>
-    );
-};
+// TODO: Pass reFetch method and try again
+// TODO: actual loader and error screen
+export const FetchingState: React.FC<IFetchingState> = (props) => (
+    <>
+        {props.isLoading && <div>Loading data...</div>}
+        {props.hasError && <div>Ups... Something went wrong</div>}
+    </>
+);

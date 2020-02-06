@@ -12,11 +12,10 @@ export const usePlaylist = (props: IPlaylistIn) => {
     const { fetchPlaylist, fetchingState } = useFetch();
 
     const dispatch = useDispatch();
-    const categoryPlaylists = useSelector((state: IStoreState) => {
-
-        return state.playlistData &&
-            state.playlistData.find((playlist) => playlist.playlistId === props.playlistId);
-    });
+    const categoryPlaylists = useSelector((state: IStoreState) =>
+        state.playlistData &&
+        state.playlistData.find((playlist) => playlist.playlistId === props.playlistId,
+        ));
 
     const fillData = async () => {
         if (categoryPlaylists) { return; }

@@ -24,6 +24,7 @@ export const Svg: FunctionComponent<ISvg> = (props) => {
         alternativeText = "",
     } = props;
 
+    // TODO: This should be an svg on a <div> so that we could maninupate their appearence better
     return (
         <img
             className={classnames("container", className)}

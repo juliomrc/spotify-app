@@ -1,5 +1,7 @@
 import React from "react";
+
 import { useGetCategories } from "../logic/use-get-catgories/use-get-categories";
+
 import { Category } from "../category";
 import { FetchingState } from "../fetching-state";
 

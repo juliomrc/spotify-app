@@ -5,9 +5,9 @@ import { SideBar } from "../side-bar/side-bar";
 import { BottomBar } from "../bottom-bar";
 import { Categories } from "../categories";
 import { Playlist } from "../playlist";
+import { Category } from "../category";
 
 import "./container.css";
-import { Category } from "../category";
 
 export enum ContentMode {
     NewReleases,
@@ -44,6 +44,7 @@ export const MasterContainer = () => {
             case ContentMode.Playlist:
                 return <Playlist playlistId={expandedPlaylist} />;
             case ContentMode.Search:
+                // TODO: Create SearchResults component that has Category component, and TracksComponent and ArtisComponet, etc
                 return <div>Search {searchFilter}</div>;
         }
     };

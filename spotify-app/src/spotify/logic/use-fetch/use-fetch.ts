@@ -1,8 +1,11 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 import SpotifyWebApi from "spotify-web-api-js";
 
 const spotify = new SpotifyWebApi();
+
+// Implementation to use with the auth_server.
+// Should be unnecessary after integration
 
 const getHashParams = () => {
     const hashParams: any = {};
@@ -10,7 +13,6 @@ const getHashParams = () => {
     const q = window.location.pathname.substring(1);
     let e = r.exec(q);
     while (e) {
-        // tslint:disable-next-line: no-magic-numbers
         hashParams[e[1]] = decodeURIComponent(e[2]);
         e = r.exec(q);
     }
@@ -34,6 +36,7 @@ export interface IFetchingState {
 export const useFetch = () => {
     const [fetchingState, setFetchingState] = useState<IFetchingState>();
 
+    // TODO: The try catch logic with the loader and error handling should be generic and shared
     const fetchNewReleases = async () => {
         try {
             setFetchingState({ isLoading: true });
@@ -44,6 +47,10 @@ export const useFetch = () => {
 
         } catch {
             setFetchingState({ isLoading: false, hasError: true });
+
+            // TODO, all responses shoud extend IFetchingState and then the
+            // validation should be done in the presentational component
+            // instead of validation for null values in all parts of the object
         }
     };
 

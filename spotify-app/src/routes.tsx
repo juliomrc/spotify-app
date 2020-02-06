@@ -6,11 +6,17 @@ export const SpotifyAsync = lazy(() => import(
     "./spotify/spotify"
 ));
 
-// tslint:disable:jsx-no-lambda
-const Routes = withRouter((props: RouteComponentProps) => (
+export const UserPage = lazy(() => import(
+    /* webpackChunkName: "widget-center" */
+    "./spotify/user-page"
+));
+// TODO: Route paths should be in a constants folder and not be hardcoded in the solution
+// TODO: container wrapper with styles should be around the routes
+const Routes = withRouter(() => (
     <React.Suspense fallback={<div>Loading...</div>} >
         <Switch>
-            <Route exact={false} path={"/"} component={SpotifyAsync} />
+            <Route exact={false} path={"/spotify"} component={SpotifyAsync} />
+            <Route exact={true} path={"/user"} component={UserPage}/>
         </Switch>
     </React.Suspense>
 ));

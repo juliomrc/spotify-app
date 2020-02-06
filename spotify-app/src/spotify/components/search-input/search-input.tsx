@@ -1,7 +1,6 @@
 import React, { useRef, useState } from "react";
 import classNames from "classnames";
 
-// TODO ALIAS
 import { TextInput } from "../text-input";
 import { Button } from "../button";
 import { Svg } from "../svg";

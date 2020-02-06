@@ -1,11 +1,13 @@
 import React from "react";
+import { useDispatch } from "react-redux";
+
 import { usePlaylist } from "../logic/use-playlist/use-playlist";
+import { playerActions } from "../logic/store/player";
+
+import { Button } from "../components/button";
+import { FetchingState } from "../fetching-state";
 
 import "./playlist.css";
-import { Button } from "../components/button";
-import { useDispatch } from "react-redux";
-import { playerActions } from "../logic/store/player";
-import { FetchingState } from "../fetching-state";
 
 interface IPlaylist {
     playlistId: string;
@@ -31,7 +33,6 @@ export const Playlist: React.FC<IPlaylist> = (props) => {
 
     return (
         <div className={"container"}>
-
             <FetchingState {...playlist.fetchingState} />
             <div className={"flex-collum"}>
                 <img className={"playlist-image"} src={playlist.categoryPlaylists?.playlist?.images[0].url} />

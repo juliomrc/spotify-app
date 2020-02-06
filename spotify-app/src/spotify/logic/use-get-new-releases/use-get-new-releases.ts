@@ -1,12 +1,10 @@
 import { useEffect, useState } from "react";
-import { useSelector, useDispatch } from "react-redux";
 import { useFetch } from "../use-fetch";
-import { IStoreState } from "../store/store-provider";
-import { categoryActions } from "../store/category-data";
 
 export const useGetNewReleases = () => {
     const { fetchNewReleases, fetchingState } = useFetch();
 
+    // TODO: Could also be stored in the store
     // const dispatch = useDispatch();
     // const categoryPlaylists = useSelector((state: IStoreState) =>
     //     state.categoriesData,
