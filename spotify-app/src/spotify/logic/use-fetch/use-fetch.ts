@@ -10,7 +10,7 @@ const spotify = new SpotifyWebApi();
 const getHashParams = () => {
     const hashParams: any = {};
     const r = /([^&;=]+)=?([^&;]*)/g;
-    const q = window.location.pathname.substring(1);
+    const q = window.location.search.substring(1);
     let e = r.exec(q);
     while (e) {
         hashParams[e[1]] = decodeURIComponent(e[2]);
