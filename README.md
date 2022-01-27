@@ -1,3 +1,7 @@
+# Archived repository
+
+This repository is being archived. It was used as a react + typescript exercise and no longer relevant.
+
 # To run the app:
 First Terminal
 cd .\auth-server && npm i && cd cd .\authorization_code\ && node app.js
